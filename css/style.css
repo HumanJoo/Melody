@@ -1,0 +1,52 @@
+
+* {
+    box-sizing: border-box; /* для всех элементов действует это правило. Позволяет правильно считать высоту и ширину элементов */
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.header {
+    background-color: #635854;
+    padding-top: 12px; /* внутренний верхний отступ */
+    padding-bottom: 12px; /* внутренний нижний отступ */
+    border-bottom: 4px solid #3596F5; /* обводка (border) сплошная (solid), но только снизу */
+}
+.navbar {
+    max-width: 1280px; /* ограничиваю ширину */
+    margin: auto;
+    display: flex; /* сделал блок гибким */
+    justify-content: space-between; /* расставляю элементы по краям */
+    align-items: center; /* выравниваю по центру */
+}
+.navbar-menu {
+    margin: 0; /* отключаю внешние отступы */
+    padding: 0; /* отключаю внутренние отступы */
+    list-style: none; /* отключаю точки у навигации */
+    display: flex; /* сделал блок гибким */
+    text-align: center; /* выставил текст по центру */
+}
+.navbar-item {
+    margin-left: 40px; /* раздвигаю элементы списка */
+    margin-right: 40px; /* раздвигаю элементы списка */
+}
+.navbar-link {
+    text-decoration: none; /* отключаю декорирование (подчеркивание) текста */
+    color: #ffffff;
+}
+.navbar-contacts {
+    text-align: right; /* весь текст выравниваем по правому краю */
+}
+.navbar-text {
+    display: block; /* делаю блочным элементом (должен занимать всю строчку) */
+    color: #ffffff;
+    margin-bottom: 4px; /* нижний отступ */
+    font-size: 14px;
+    line-height: 16px;
+}
+.navbar-phone {
+    text-decoration: none; /* отключаю декорирование (подчеркивание) текста */
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: #ffffff;
+}
