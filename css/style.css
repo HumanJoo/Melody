@@ -96,6 +96,9 @@ body {
 .home-image path:hover {
     opacity: 1; /* делаю видимой svg геометрическую фигуру path при наведении на нее */
 }
+path.current-floor {
+    opacity: 1;
+}
 .counter-group {
     display: flex;
     flex-direction: column;
