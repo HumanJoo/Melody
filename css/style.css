@@ -120,7 +120,7 @@ path.current-floor {
     line-height: 44px;
     color: #635854;
 }
-.counter {
+.floor-counter {
     font-family: "Bebas Neue Cyrillic", sans-serif;
     color: #635854;
     font-size: 124px;
@@ -132,4 +132,90 @@ path.current-floor {
     border: none;
     padding: 16px 36px;
     cursor: pointer;
+}
+.modal {
+    position: fixed; /* фиксированная позиция, поверх всего сайта */
+    left: 0; /* приклеиваем к левому краю */
+    top: 0; /* приклеиваем к верху */
+    width: 100%; /* модальное окно перекрывает весь сайт по ширине */
+    height: 100%; /* модальное окно перекрывает весь сайт по высоте */
+    background-color: rgba(0, 0, 0, 0.8); /* полупразрачный фоновый черный цвет */
+    display: flex; /* родительский элемент гибкий */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* скрываю модальное окно, оно есть но не видно */
+    transform: scale(0); /* окно сжимаю в ноль, его не видно вообще */
+    transition: opacity 0.2s; /* добавляю плавность свойству opacity, окно будет появляться плавно */
+}
+.is-open {
+    /* делаю окно видимым */
+    opacity: 1;
+    transform: scale(1);
+}
+.modal-dialog {
+    position: relative; /* для правильного позиционирования кнопки закрытия диалогового окна */
+    max-width: 1000px;
+    min-height: 565px;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex; /* располагались по вертикали сверху вниз, теперь будут по горизонтали */
+}
+.modal-image {
+    background-color: #EBEBEB;
+    width: 60%;
+    text-align: center; /* весь текст по центру */
+    padding: 50px; /* равные со всех сторон внутренние отступы */
+}
+.flats path {
+    opacity: 0;
+}
+.flats path:hover{
+    opacity: 1;
+}
+.modal-title {
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 0; /* отключаем браузерные отступы сверху */
+    margin-bottom: 25px; /* поправляем нижний отступ */
+}
+.modal-info {
+    width: 40%; /* эта часть должна занимать столько пространства модального окна' */
+    padding: 50px 46px;  
+}
+.flat-list {
+    padding: 0;
+    list-style: none;
+    margin-top: 55px;
+}
+.flat-item {
+    margin-bottom: 10px;
+}
+.flat-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+    text-decoration: none;
+}
+.flat-link:hover {
+    color: #3596F5;
+    text-decoration: underline;
+}
+.modal-alert {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+    margin-top: 50px;
+}
+.modal-close-button{
+    position: absolute;
+    right: 27px;
+    top: 38px;
+    background: #FFFFFF;
+    cursor: pointer;
+    border: none;
+
 }
