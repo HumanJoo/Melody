@@ -1,4 +1,28 @@
-
+@font-face {
+    font-family: 'Bebas Neue Cyrillic';
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'),
+        url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 * {
     box-sizing: border-box; /* для всех элементов действует это правило. Позволяет правильно считать высоту и ширину элементов */
 }
@@ -45,8 +69,64 @@ body {
 }
 .navbar-phone {
     text-decoration: none; /* отключаю декорирование (подчеркивание) текста */
+    font-family: "Roboto Bold", sans-serif;
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
     color: #ffffff;
+}
+.main {
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 54px;
+    display: flex; /* выстраиваю все содержимое блока main */
+}
+.main-info {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-image path {
+    opacity: 0; /* скрываю все svg геометрические фигуры path */
+    cursor: pointer;
+}
+.home-image path:hover {
+    opacity: 1; /* делаю видимой svg геометрическую фигуру path при наведении на нее */
+}
+.counter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter-button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none; /* убираю обводку у кнопки */
+}
+.counter-arrow-down {
+    transform: rotateX(180deg); /* разворачиваю стрелку по оси X на 180 градусов */
+}
+.main-title {
+    margin: 0;
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 44px;
+    color: #635854;
+}
+.counter {
+    font-family: "Bebas Neue Cyrillic", sans-serif;
+    color: #635854;
+    font-size: 124px;
+}
+.button-primary {
+    background: #3596F5;
+    border-radius: 6px;
+    color: #ffffff;
+    border: none;
+    padding: 16px 36px;
+    cursor: pointer;
 }
